@@ -1,1 +1,5 @@
 zadanie z gita zobaczymy co mi wyjdzie
+
+dodam sobie tutaj coœ takiego i zobaczê czy to zobacze w gitsmart.
+
+powiedzmy ze dododam jeszcze coœ takiego i tego nie bede chcia³a commitowaæ (jeju co za jêzyk)
