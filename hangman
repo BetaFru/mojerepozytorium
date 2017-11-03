@@ -1,0 +1,62 @@
+def board(slowo):
+    luki =list(slowo)
+    word = str(len(slowo))
+    s = []
+    q = []
+    for x in range(len(slowo)):
+        s.append('_')
+
+
+    print ('Welcome to the game, Hangman!')
+    print ('I am thinking of a word that is', len(slowo), 'letters long') 
+    print (' '.join(s))
+   
+
+
+    turn = 9
+    while turn > 0:
+        print ('You have',turn, 'guesses left')
+        guess_letter = input("podaj litere ")  
+    
+        
+        if guess_letter in slowo:
+            print ("Good guess")
+            for index, val in enumerate(luki):
+                if val == guess_letter:
+                    s[index] = guess_letter
+            
+            print (' '.join(s))
+            turn = turn 
+            
+                #if guess_letter in s:
+                 #   print ("You try this letter once")
+                  #  turn = turn - 1
+
+            if s == luki:
+                
+                print ('You win !!!',"The looking word is:", "".join(luki)),
+                break
+        elif len(guess_letter) >1:
+            print ("Please give only ONE letter")
+            turn = turn - 1
+        elif guess_letter in '123456789':
+            print ("That's NOT a letter")
+            turn = turn - 1
+        else:
+            print ("Wrong guess")
+            print (' '.join(s))
+            turn = turn - 1
+            if turn == 0:
+                print ("You loose. The word was:", slowo.upper())
+            
+                   
+        
+#for turn in range(8):
+ #   print 
+  #  if litery == z:
+   #     print ("zgadles")
+    #else:
+     #   print ('sprobuj jeszcze raz')"""
+        
+board('komoda')
+
